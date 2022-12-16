@@ -11,5 +11,6 @@ fun main() {
     val inputView = InputView(validator, outputView)
     val mainController = MainController(inputView, outputView)
 
+
     mainController.run()
 }

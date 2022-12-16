@@ -9,17 +9,17 @@ class MainController(
 ) {
 
     fun run() {
-        getValidatedInput()
+        // getValidatedInput()
     }
 
-    private fun getValidatedInput(): Int {
-        while (true) {
-            try {
-                return inputView.read()
-            } catch (e: IllegalArgumentException) {
-                outputView.printErrorMessage(e)
-            }
-        }
-    }
+//    private fun getValidatedInput(): Int {
+//        while (true) {
+//            try {
+//                return inputView.read()
+//            } catch (e: IllegalArgumentException) {
+//                outputView.printErrorMessage(e)
+//            }
+//        }
+//    }
 
 }

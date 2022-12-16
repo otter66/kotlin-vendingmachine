@@ -15,5 +15,6 @@ const val NOTICE_ERROR_MESSAGE = "[ERROR] "
 
 // value condition message
 const val COST_CONDITION_MESSAGE = "금액은 숫자여야 합니다."
+const val COUNT_CONDITION_MESSAGE = "개수는 숫자여야 합니다."
 const val PRODUCT_INPUT_FORM_CONDITION_MESSAGE = "상품 가격은 '[콜라,1500,20];[사이다,1000,10]'의 형태로 작성하여야 합니다."
 const val PRODUCT_COST_CONDITION_MESSAGE = "상품 가격은 100원 이상, 10단위여야 합니다."
