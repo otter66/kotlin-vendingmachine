@@ -5,6 +5,7 @@ import vendingmachine.domain.Validator
 import vendingmachine.model.Product
 import vendingmachine.values.REQUIRE_INPUT_AMOUNT_MESSAGE
 import vendingmachine.values.REQUIRE_PRODUCTS_MESSAGE
+import vendingmachine.values.REQUIRE_PURCHASE_PRODUCT_NAME_MESSAGE
 import vendingmachine.values.REQUIRE_VENDING_MACHINE_AMOUNT_MESSAGE
 
 class InputView(
@@ -31,6 +32,7 @@ class InputView(
     }
 
     fun readPurchaseProductName(): String {
+        outputView.printMessage(REQUIRE_PURCHASE_PRODUCT_NAME_MESSAGE)
         return Console.readLine()
     }
 
