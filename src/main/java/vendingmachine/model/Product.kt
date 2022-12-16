@@ -6,5 +6,8 @@ class Product(
     private var count: Int
 ) {
 
+    fun getProductCost() = cost
+
+    fun isAvailableProducts() = count > 0
 
 }

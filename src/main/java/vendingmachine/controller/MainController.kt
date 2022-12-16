@@ -14,15 +14,23 @@ class MainController(
 
     fun run() {
         val vendingMachine: VendingMachine = makeVendingMachine()
-        val inputAmount: Int = getValidatedInputAmount()
+
+        purchaseProducts(vendingMachine)
+    }
+
+    private fun purchaseProducts(vendingMachine: VendingMachine) {
+        while (true) {
+            if (!vendingMachine.isAvailableStatus()) break
+        }
     }
 
     private fun makeVendingMachine(): VendingMachine {
         val amount = getValidatedVendingMachineAmount()
         val coinList = generator.makeMachineCoinList(amount)
         val productList = getValidatedProductList()
+        val inputAmount: Int = getValidatedInputAmount()
 
-        return VendingMachine(amount, coinList, productList)
+        return VendingMachine(inputAmount, coinList, productList)
     }
 
     private fun getValidatedVendingMachineAmount(): Int {
