@@ -13,13 +13,12 @@ class OutputView {
     }
 
     fun printRemainingInputAmount(amount: Int) {
-        println(NOTICE_REMAINING_MONEY_MESSAGE.format(amount))
-        println()
+        println(NOTICE_INPUT_AMOUNT_MESSAGE_FORMAT.format(amount))
     }
 
     fun printCoinsCount(coinList: List<Coin>) {
         repeat(coinList.size) { index ->
-            println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(
+            println(NOTICE_COIN_COUNT_MESSAGE_FORMAT.format(
                 coinList[index].amount, coinList[index].count))
         }
        println()

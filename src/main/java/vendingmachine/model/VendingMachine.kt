@@ -8,6 +8,21 @@ class VendingMachine(
     private val products: List<Product>
 ) {
 
+    fun purchaseProduct(purchaseProductName: String) {
+
+    }
+
+    fun countChange(): List<Coin> {
+        val changeCoinList = mutableListOf<Coin>()
+
+        repeat(coinList.size) { index ->
+            val coin: Coin = coinList[index]
+            if (coin.count > 0) changeCoinList.add(coin)
+        }
+
+        return changeCoinList
+    }
+
     fun isAvailableStatus(): Boolean {
         if (!containsAvailableProducts()) return false
         if (inputAmount < minimumAvailableProductCost()) return false
@@ -35,5 +50,7 @@ class VendingMachine(
 
         return false
     }
+
+    fun getInputAmount() = inputAmount
 
 }

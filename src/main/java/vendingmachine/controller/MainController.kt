@@ -3,6 +3,8 @@ package vendingmachine.controller
 import vendingmachine.domain.Generator
 import vendingmachine.model.Product
 import vendingmachine.model.VendingMachine
+import vendingmachine.values.NOTICE_REMAINING_MONEY_MESSAGE
+import vendingmachine.values.REQUIRE_PURCHASE_PRODUCT_NAME_MESSAGE
 import vendingmachine.view.InputView
 import vendingmachine.view.OutputView
 
@@ -16,11 +18,20 @@ class MainController(
         val vendingMachine: VendingMachine = makeVendingMachine()
 
         purchaseProducts(vendingMachine)
+
+        outputView.printMessage(NOTICE_REMAINING_MONEY_MESSAGE)
+        outputView.printCoinsCount(vendingMachine.countChange())
     }
 
     private fun purchaseProducts(vendingMachine: VendingMachine) {
         while (true) {
+            outputView.printRemainingInputAmount(vendingMachine.getInputAmount())
             if (!vendingMachine.isAvailableStatus()) break
+
+            outputView.printMessage(REQUIRE_PURCHASE_PRODUCT_NAME_MESSAGE)
+            val purchaseProductName = inputView.readPurchaseProductName()
+
+            vendingMachine.purchaseProduct(purchaseProductName)
         }
     }
 
