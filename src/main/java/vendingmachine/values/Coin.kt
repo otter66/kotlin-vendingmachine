@@ -1,4 +1,4 @@
-package vendingmachine
+package vendingmachine.values
 
 enum class Coin(
     private val amount: Int)
