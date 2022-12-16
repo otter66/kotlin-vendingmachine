@@ -1,4 +1,8 @@
 package vendingmachine.model
 
-class VendingMachine {
+class VendingMachine(
+    private var amount: Int,
+    private var products: List<Product>
+) {
+
 }

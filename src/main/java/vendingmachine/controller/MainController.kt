@@ -1,7 +1,7 @@
-package controller
+package vendingmachine.controller
 
-import view.InputView
-import view.OutputView
+import vendingmachine.view.InputView
+import vendingmachine.view.OutputView
 
 class MainController(
     private val inputView: InputView,

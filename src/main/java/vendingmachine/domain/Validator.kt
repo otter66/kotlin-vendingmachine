@@ -1,4 +1,4 @@
-package domain
+package vendingmachine.domain
 
 class Validator {
 

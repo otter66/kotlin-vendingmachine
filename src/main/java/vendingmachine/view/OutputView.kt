@@ -1,4 +1,4 @@
-package view
+package vendingmachine.view
 
 class OutputView {
 
