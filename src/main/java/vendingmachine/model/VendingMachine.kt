@@ -4,7 +4,7 @@ import vendingmachine.values.Coin
 
 class VendingMachine(
     private var amount: Int,
-    private var coinCountList: MutableList<Int>,
+    private var coinList: MutableList<Coin>,
     private var products: List<Product>
 ) {
 

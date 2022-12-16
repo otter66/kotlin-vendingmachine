@@ -13,8 +13,5 @@ fun main() {
     val mainController = MainController(inputView, outputView)
 
 
-
-    inputView.readInputAmount()
-    inputView.readVendingMachineAmount()
-    // mainController.run()
+    mainController.run()
 }
