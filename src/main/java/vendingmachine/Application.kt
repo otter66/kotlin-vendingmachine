@@ -2,6 +2,7 @@ package vendingmachine
 
 import vendingmachine.controller.MainController
 import vendingmachine.domain.Validator
+import vendingmachine.values.Coin
 import vendingmachine.view.InputView
 import vendingmachine.view.OutputView
 
@@ -12,6 +13,8 @@ fun main() {
     val mainController = MainController(inputView, outputView)
 
 
+
     inputView.readInputAmount()
-    mainController.run()
+    inputView.readVendingMachineAmount()
+    // mainController.run()
 }

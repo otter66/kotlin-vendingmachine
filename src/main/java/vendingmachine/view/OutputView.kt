@@ -1,6 +1,6 @@
 package vendingmachine.view
 
-import vendingmachine.values.NOTICE_REMAINING_MONEY_MESSAGE
+import vendingmachine.values.*
 
 class OutputView {
 
@@ -14,5 +14,14 @@ class OutputView {
 
     fun printRemainingInputAmount(amount: Int) {
         println(NOTICE_REMAINING_MONEY_MESSAGE.format(amount))
+        println()
+    }
+
+    fun printVendingMachineCoins(coin: Coin) {
+        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_500, coin.count))
+        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_100, coin.count))
+        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_50, coin.count))
+        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_10, coin.count))
+        println()
     }
 }
