@@ -17,11 +17,12 @@ class OutputView {
         println()
     }
 
-    fun printVendingMachineCoins(coin: Coin) {
-        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_500, coin.count))
-        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_100, coin.count))
-        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_50, coin.count))
-        println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(COIN_10, coin.count))
-        println()
+    fun printCoinsCount(coinList: List<Coin>) {
+        repeat(coinList.size) { index ->
+            println(NOTICE_VENDING_MACHINE_COINS_MESSAGE.format(
+                coinList[index].amount, coinList[index].count))
+        }
+       println()
     }
+
 }

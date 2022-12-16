@@ -1,7 +1,7 @@
 package vendingmachine.values
 
 enum class Coin(
-    private val amount: Int,
+    val amount: Int,
     var count: Int,
 ) {
     COIN_500(500, 0),
