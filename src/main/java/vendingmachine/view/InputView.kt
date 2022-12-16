@@ -30,4 +30,8 @@ class InputView(
         return validator.validateInputAmount(input)
     }
 
+    fun readPurchaseProductName(): String {
+        return Console.readLine()
+    }
+
 }
