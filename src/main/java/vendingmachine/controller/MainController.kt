@@ -14,6 +14,7 @@ class MainController(
 
     fun run() {
         val vendingMachine: VendingMachine = makeVendingMachine()
+        val inputAmount: Int = getValidatedInputAmount()
     }
 
     private fun makeVendingMachine(): VendingMachine {
@@ -38,6 +39,16 @@ class MainController(
         while (true) {
             try {
                 return inputView.readVendingMachineProducts()
+            } catch (e: IllegalArgumentException) {
+                outputView.printErrorMessage(e)
+            }
+        }
+    }
+
+    private fun getValidatedInputAmount(): Int {
+        while (true) {
+            try {
+                return inputView.readInputAmount()
             } catch (e: IllegalArgumentException) {
                 outputView.printErrorMessage(e)
             }
