@@ -27,8 +27,7 @@ class MainController(
         while (true) {
             outputView.printRemainingInputAmount(vendingMachine.getInputAmount())
             if (!vendingMachine.isAvailableStatus()) break
-
-            outputView.printMessage(REQUIRE_PURCHASE_PRODUCT_NAME_MESSAGE)
+            
             val purchaseProductName = inputView.readPurchaseProductName()
 
             vendingMachine.purchaseProduct(purchaseProductName)
