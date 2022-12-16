@@ -11,3 +11,9 @@ const val NOTICE_INPUT_AMOUNT_MESSAGE_FORMAT = "투입 금액: %d원"
 const val NOTICE_VENDING_MACHINE_COINS_MESSAGE = "자판기가 보유한 동전"
 const val NOTICE_COIN_COUNT_MESSAGE_FORMAT = "%d원 - %d개"
 const val NOTICE_REMAINING_MONEY_MESSAGE = "잔돈"
+const val NOTICE_ERROR_MESSAGE = "[ERROR] "
+
+// value condition message
+const val COST_CONDITION_MESSAGE = "금액은 숫자여야 합니다."
+const val PRODUCT_INPUT_FORM_CONDITION_MESSAGE = "상품 가격은 '[콜라,1500,20];[사이다,1000,10]'의 형태로 작성하여야 합니다."
+const val PRODUCT_COST_CONDITION_MESSAGE = "상품 가격은 100원 이상, 10단위여야 합니다."

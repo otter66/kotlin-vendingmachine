@@ -2,7 +2,7 @@ package vendingmachine.domain
 
 class Validator {
 
-    fun validate(input: String) {
+    fun validateVendingMachineAmount(input: String) {
         require(input.toIntOrNull() != null) {
             "[ERROR]"
         }
