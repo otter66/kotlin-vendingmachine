@@ -3,6 +3,7 @@ package vendingmachine.view
 import camp.nextstep.edu.missionutils.Console
 import vendingmachine.domain.Validator
 import vendingmachine.model.Product
+import vendingmachine.values.REQUIRE_INPUT_AMOUNT_MESSAGE
 import vendingmachine.values.REQUIRE_PRODUCTS_MESSAGE
 import vendingmachine.values.REQUIRE_VENDING_MACHINE_AMOUNT_MESSAGE
 
@@ -21,6 +22,12 @@ class InputView(
         outputView.printMessage(REQUIRE_PRODUCTS_MESSAGE)
         val input = Console.readLine()
         return validator.validateVendingMachineProducts(input)
+    }
+
+    fun readInputAmount(): Int {
+        outputView.printMessage(REQUIRE_INPUT_AMOUNT_MESSAGE)
+        val input = Console.readLine()
+        return validator.validateInputAmount(input)
     }
 
 }

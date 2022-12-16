@@ -12,5 +12,6 @@ fun main() {
     val mainController = MainController(inputView, outputView)
 
 
+    inputView.readInputAmount()
     mainController.run()
 }

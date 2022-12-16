@@ -30,6 +30,14 @@ class Validator {
         return productList.toList()
     }
 
+    fun validateInputAmount(input: String): Int {
+        require(input.toIntOrNull() != null) {
+            NOTICE_ERROR_MESSAGE + COST_CONDITION_MESSAGE
+        }
+
+        return input.toInt()
+    }
+
     private fun checkInputProducts(groupList: MutableList<String>) {
         repeat(groupList.size) { index ->
             require(groupList[index].contains("[") &&
